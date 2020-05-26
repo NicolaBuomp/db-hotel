@@ -1,0 +1,45 @@
+Esercizio : Seleziona tutti gli ospiti che sono stati identificati con la carta di identità
+
+Svolgimento : SELECT * FROM `ospiti` WHERE `document_type` = 'CI';
+
+
+
+Esercizio : Seleziona tutti gli ospiti che sono nati dopo il 1988.
+
+Svolgimento : SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-12-01';
+
+
+
+Esercizio : Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzione della query)
+
+Svolgimento : 
+
+
+
+Esercizio :Seleziona tutti gli ospiti il cui nome inizia con la D
+
+Svolgimento : SELECT * FROM `ospiti` WHERE `name` LIKE 'D%';
+
+
+
+Esercizio : Calcola il totale degli ordini accepted
+
+Svolgimento : SELECT SUM(`price`) AS 'total' FROM `pagamenti` WHERE `status` = 'accepted';
+
+
+
+Esercizio : Qual è il prezzo massimo pagato?
+
+Svolgimento : SELECT MAX(`price`) AS 'max_price' FROM `pagamenti` WHERE `status` = 'accepted';
+
+
+
+Esercizio : Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+
+Svolgimento : SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND YEAR(`date_of_birth`) = '1975';
+
+
+
+Esercizio : Quanti posti letto ha l’hotel in totale?
+
+Svolgimento : SELECT SUM(`beds`) FROM `stanze` AS `total_beds`;
